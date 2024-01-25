@@ -1,0 +1,27 @@
+(gdb) b main
+Breakpoint 1 at 0x4014e8: file problem07.c, line 25.
+(gdb) l
+16          }
+17          return sum;
+18      }
+19      void output(int n,int sum)
+20      {
+21          printf("The sum of %d natural numbers is %d ",n,sum);
+22      }
+23      int main()
+24      {
+25          int n=input_n();
+(gdb) r
+Starting program: C:\Users\vaagd\Documents\GitHub\c_activity\set01/a.exe 
+[New Thread 10128.0x5dc]
+[New Thread 10128.0x293c]
+
+Breakpoint 1, main () at problem07.c:25
+25          int n=input_n();
+(gdb) s
+input_n () at problem07.c:6
+6           printf("Enter the value of n \n");
+(gdb) s
+Enter the value of n 
+7           scanf("%d",&n);
+(gdb) s
