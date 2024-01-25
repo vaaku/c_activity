@@ -1,0 +1,33 @@
+(gdb) b main
+Breakpoint 1 at 0x4014d8: file problem03.c, line 23.
+(gdb) l
+14          return sum;
+15      }
+16      void output(int a,int b,int sum)
+17      {
+18          printf("The sum of the numbers %d and %d is %d ",a,b,sum);
+19      }
+20      int main()
+21      {
+22          int a,b,sum;
+23          a=input();
+(gdb) r
+Starting program: C:\Users\vaagd\Documents\GitHub\c_activity\set01/a.exe 
+[New Thread 9500.0x21bc]
+[New Thread 9500.0x1d84]
+
+Breakpoint 1, main () at problem03.c:23
+23          a=input();
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 9500] will be killed.
+
+Quit anyway? (y or n) n
+Not confirmed.
+(gdb) s
+input () at problem03.c:6
+6           printf("Enter the value of of number ");
+(gdb) s
+Enter the value of of number 7      scanf("%d",&num);
+(gdb) s
