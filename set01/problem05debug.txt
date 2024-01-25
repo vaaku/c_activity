@@ -1,0 +1,27 @@
+(gdb) b main
+Breakpoint 1 at 0x40150a: file problem05.c, line 34.
+(gdb) l
+25          return largest;
+26      }
+27      void output(int a, int b, int c, int largest)
+28      {
+29          printf("The largest of %d,%d and %d is %d",a,b,c,largest);
+30      }
+31      int main()
+32      {
+33          int a,b,c,largest;
+34          a=input();
+(gdb) r
+Starting program: C:\Users\vaagd\Documents\GitHub\c_activity\set01/a.exe 
+[New Thread 1464.0xd68]
+[New Thread 1464.0x2758]
+
+Breakpoint 1, main () at problem05.c:34
+34          a=input();
+(gdb) s
+input () at problem05.c:6
+6           printf("Enter the value to be compared \n");
+(gdb) s
+Enter the value to be compared 
+7           scanf("%d",&num);
+(gdb) s
