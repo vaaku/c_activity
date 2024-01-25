@@ -2,9 +2,10 @@
 #include<stdio.h>
 void input(int *a,int *b)
 {
-    int num;
     printf("Enter the numbers to be added ");
-    scanf("%d%d",a,b);
+    scanf("%d",a);
+    printf("Enter the numbers to be added ");
+    scanf("%d",b);
 }
 void add(int a,int b,int*sum)
 {
