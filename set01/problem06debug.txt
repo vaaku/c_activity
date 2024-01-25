@@ -1,0 +1,27 @@
+(gdb) b main
+Breakpoint 1 at 0x40154c: file problem06.c, line 35.
+(gdb) l
+26          }
+27      }
+28      void output(int a,int b,int c,int largest)
+29      {
+30          printf("The largest among %d,%d and %d is %d ",a,b,c,largest);
+31      }
+32      int main()
+33      {
+34          int a,b,c,largest;
+35          input(&a,&b,&c);
+(gdb) r
+Starting program: C:\Users\vaagd\Documents\GitHub\c_activity\set01/a.exe 
+[New Thread 9924.0x1db0]
+[New Thread 9924.0x2510]
+
+Breakpoint 1, main () at problem06.c:35
+35          input(&a,&b,&c);
+(gdb) s
+input (a=0x61ff1c, b=0x61ff18, c=0x61ff14) at problem06.c:5
+5           printf("Enter the first value \n");
+(gdb) s
+Enter the first value 
+6           scanf("%d",a);
+(gdb) s
