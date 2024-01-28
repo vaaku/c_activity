@@ -4,14 +4,14 @@
 
 float input()
 {
-    int n;
+    float n;
     printf("Enter the value to be square rooted ");
     scanf("%f",&n);
     return n;
 }
 float square_root(float n)
 {
-    int x=1,y=n/2;
+    float x=1,y=n/2;
     float p=0.000001;
     while(fabs(y-x)>p)
     {
@@ -22,8 +22,7 @@ float square_root(float n)
 }
 void output(float n,float sqrroot)
 {
-    printf("The squareroot of %f ",n);
-    printf("is %f",sqrroot);
+    printf("The squareroot of %f is %f \n",n,sqrroot);
 }
 int main()
 {
