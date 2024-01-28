@@ -1,0 +1,63 @@
+(gdb) b main
+Breakpoint 1 at 0x401514: file problem09.c, line 30.
+(gdb) r
+Starting program: C:\Users\vaagd\c_activity\set01/a.exe 
+[New Thread 10060.0x2c88]
+[New Thread 10060.0x13c4]
+
+Breakpoint 1, main () at problem09.c:30
+30          n=input();
+(gdb) l
+25          printf("The squareroot of %f is %f \n",n,sqrroot);
+26      }
+27      int main()
+28      {
+29          float n,sqrroot;
+30          n=input();
+31          sqrroot=square_root(n);
+32          output(n,sqrroot);
+33          return 0;
+34      }(gdb) s
+input () at problem09.c:8
+8           printf("Enter the value to be square rooted ");
+(gdb) s
+Enter the value to be square rooted 9       scanf("%f",&n);
+(gdb) s
+s
+10          return n;
+(gdb) s
+11      }
+(gdb) s
+main () at problem09.c:31
+31          sqrroot=square_root(n);
+(gdb) s
+square_root (n=0) at problem09.c:14
+14          float x=1,y=n/2;
+(gdb) s
+15          float p=0.000001;
+(gdb) s
+16          while(fabs(y-x)>p)
+(gdb) s
+18              x=y;
+(gdb) s
+19              y=(x+n/x)/2;
+(gdb) s
+16          while(fabs(y-x)>p)
+(gdb) s
+21          return y;
+(gdb) s
+22      }
+(gdb) s
+main () at problem09.c:32
+32          output(n,sqrroot);
+(gdb) s
+output (n=0, sqrroot=-nan(0x400000)) at problem09.c:25
+25          printf("The squareroot of %f is %f \n",n,sqrroot);
+(gdb) s
+The squareroot of 0.000000 is -1.#IND00 
+26      }
+(gdb) s
+main () at problem09.c:33
+33          return 0;
+(gdb) s
+34      }(gdb
