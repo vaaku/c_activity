@@ -1,0 +1,28 @@
+(gdb) b main
+Breakpoint 1 at 0x401594: file problem08.c, line 38.
+(gdb) l
+29      {
+30          printf("The sum of %d numbers ",n);
+31          for(int i=0;i<=n;i++)
+32          {
+33              printf("%d,",a[i]);
+34          }
+35          printf("is %d ",sum);
+36      }
+37      int main()
+38      {
+(gdb) r
+Starting program: C:\Users\vaagd\c_activity\set01/a.exe 
+[New Thread 5876.0x690]
+[New Thread 5876.0x1578]
+
+Breakpoint 1, 0x00401594 in main () at problem08.c:38
+38      {
+(gdb) s
+39          int n=input_array_size();
+(gdb) s
+input_array_size () at problem08.c:6
+6           printf("Enter the size of the array ");
+(gdb) s
+Enter the size of the array 7       scanf("%d",&n);
+(gdb) s
