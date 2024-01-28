@@ -1,0 +1,75 @@
+(gdb) b main
+Breakpoint 1 at 0x401526: file problem11.c, line 31.
+(gdb) r
+Starting program: C:\Users\vaagd\c_activity\set01/a.exe 
+[New Thread 5792.0x854]
+[New Thread 5792.0x2260]
+
+Breakpoint 1, main () at problem11.c:31
+31          Complex num1=input_complex();
+(gdb) l
+26      {
+27          printf("Sum of %f +%fi and %f +%fi is %f +%fi ",a.real,b.real,a.imaginary,b.imaginary,sum.real,sum.imaginary);
+28      }
+29      int main()
+30      {
+31          Complex num1=input_complex();
+32          Complex num2=input_complex();
+33          Complex sum=add_complex(num1,num2);
+34          output(num1,num2,sum);
+35          return 0;
+(gdb) s
+input_complex () at problem11.c:12
+12          printf("Enter the real part ");
+(gdb) s
+Enter the real part 13      scanf("%f",&num.real);
+(gdb) s
+s
+14          printf("Enter the imaginary part ");
+(gdb) s
+Enter the imaginary part 15         scanf("%f",&num.imaginary);
+(gdb) s
+16          return num;
+(gdb) s
+17      }
+(gdb) s
+main () at problem11.c:32
+32          Complex num2=input_complex();
+(gdb) s
+input_complex () at problem11.c:12
+12          printf("Enter the real part ");
+(gdb) s
+Enter the real part 13      scanf("%f",&num.real);
+(gdb) s
+14          printf("Enter the imaginary part ");
+(gdb) s
+Enter the imaginary part 15         scanf("%f",&num.imaginary);
+(gdb) s
+16          return num;
+(gdb) s
+17      }
+(gdb) s
+main () at problem11.c:33
+33          Complex sum=add_complex(num1,num2);
+(gdb) s
+add_complex (a=..., b=...) at problem11.c:21
+21          sum.real=a.real+b.real;
+(gdb) s
+22          sum.imaginary=a.imaginary+b.imaginary;
+(gdb) s
+23          return sum;
+(gdb) s
+24      }
+(gdb) s
+main () at problem11.c:34
+34          output(num1,num2,sum);
+(gdb) s
+output (a=..., b=..., sum=...) at problem11.c:27
+27          printf("Sum of %f +%fi and %f +%fi is %f +%fi ",a.real,b.real,a.imaginary,b.imaginary,sum.real,sum.imaginary);
+(gdb) s
+Sum of 492940179946324030000000000000000.000000 +492940179946324030000000000000000.000000i and 492939174120042110000000000000000.000000 +492939174120042110000000000000000.000000i is 985880359892648060000000000000000.000000 +985878348240084220000000000000000.000000i 28      }
+(gdb) s
+main () at problem11.c:35
+35          return 0;
+(gdb) s
+36      }(gdb)
