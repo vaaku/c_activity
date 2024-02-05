@@ -1,0 +1,25 @@
+(gdb) b main
+Breakpoint 1 at 0x4015b2: file problem12.c, line 56.
+(gdb) r
+Starting program: C:\Users\vaagd\c_activity\set01/a.exe 
+[New Thread 10912.0x25a0]
+[New Thread 10912.0x2ad8]
+
+Breakpoint 1, 0x004015b2 in main () at problem12.c:56
+56       {
+(gdb) s
+58          n=get_n();
+(gdb) s
+get_n () at problem12.c:14
+14          printf("Number of complex number you want to add ");
+(gdb) s
+Number of complex number you want to add 15         scanf("%d",&n);
+(gdb) s
+s
+16          return n;
+(gdb) s
+17       }
+(gdb) s
+main () at problem12.c:59
+59          com c[n];
+(gdb) s
