@@ -1,0 +1,46 @@
+(gdb) b main
+Breakpoint 1 at 0x40151b: file problem01.c, line 23.
+(gdb) r
+Starting program: C:\Users\vaagd\c_activity\set02/a.exe 
+[New Thread 3240.0x40c]
+[New Thread 3240.0x224c]
+
+Breakpoint 1, main () at problem01.c:23
+23          input(&base,&height);
+(gdb) s
+input (base=0x61ff1c, height=0x61ff18) at problem01.c:5
+5           printf("Enter the base of the traingle ");
+(gdb) s
+Enter the base of the traingle 6            scanf("%f",base);
+(gdb) s
+s
+7           printf("Enter the height of the triangle ");
+(gdb) s
+Enter the height of the triangle 8          scanf("%f",height);
+(gdb) s
+9       }
+(gdb) s
+main () at problem01.c:24
+24          find_area(base,height,&area);
+(gdb) s
+find_area (base=5.87765112e-039, height=3.02483165e-039, area=0x61ff14) at problem01.c:12
+12          *area=0.5*base*height;
+(gdb) s
+13      }
+(gdb) s
+main () at problem01.c:25
+25          output(base,height,area);
+(gdb) s
+output (base=5.87765112e-039, height=3.02483165e-039, area=0) at problem01.c:16
+16          printf("The base of the triangle is %f ", base);
+(gdb) s
+The base of the triangle is 0.000000 17     printf("The height of the traingle is %f ",height);
+(gdb) s
+The height of the traingle is 0.000000 18           printf("The calculated area of the triangle is %f ", area);
+(gdb) s
+The calculated area of the triangle is 0.000000 19      }
+(gdb) s
+main () at problem01.c:26
+26          return 0;
+(gdb) s
+27       }
