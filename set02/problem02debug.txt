@@ -1,0 +1,68 @@
+(gdb) b main
+Breakpoint 1 at 0x401514: file problem02.c, line 36.
+(gdb) r
+Starting program: C:\Users\vaagd\c_activity\set02/a.exe 
+[New Thread 10980.0x2408]
+[New Thread 10980.0x2e80]
+
+Breakpoint 1, main () at problem02.c:36
+36          a=input_side();
+(gdb) s
+input_side () at problem02.c:6
+6           printf("Enter the side ");
+(gdb) s
+Enter the side 7            scanf("%d",&side);
+(gdb) s
+s
+8           return side;
+(gdb) s
+9       }
+(gdb) s
+main () at problem02.c:37
+37          b=input_side();
+(gdb) s
+input_side () at problem02.c:6
+6           printf("Enter the side ");
+(gdb) s
+Enter the side 7            scanf("%d",&side);
+(gdb) s
+8           return side;
+(gdb) s
+9       }
+(gdb) s
+main () at problem02.c:38
+38          c=input_side();
+(gdb) s
+input_side () at problem02.c:6
+6           printf("Enter the side ");
+(gdb) s
+Enter the side 7            scanf("%d",&side);
+(gdb) s
+8           return side;
+(gdb) s
+9       }
+(gdb) s
+main () at problem02.c:39
+39          int isscalene=check_scalene(a,b,c);
+(gdb) s
+check_scalene (a=6422476, b=6422476, c=6422476) at problem02.c:12
+12          if(a != b && a!= c && b!= c)
+(gdb) s
+18              return 0;
+(gdb) s
+20      }
+(gdb) s
+main () at problem02.c:40
+40          output(a,b,c,isscalene);
+(gdb) s
+output (a=6422476, b=6422476, c=6422476, isscalene=0) at problem02.c:23
+23          if(isscalene)
+(gdb) s
+29              printf("The sides %d %d and %d are not a scalene triangle ",a,b,c);
+(gdb) s
+The sides 6422476 6422476 and 6422476 are not a scalene triangle 31     }
+(gdb) s
+main () at problem02.c:41
+41          return 0;
+(gdb) s
+42      }
