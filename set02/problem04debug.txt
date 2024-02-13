@@ -1,0 +1,37 @@
+(gdb) b main
+Breakpoint 1 at 0x401541: file problem04.c, line 32.
+(gdb) r
+Starting program: C:\Users\vaagd\c_activity\set02/a.exe 
+[New Thread 7484.0x2b9c]
+[New Thread 7484.0x1910]
+
+Breakpoint 1, 0x00401541 in main () at problem04.c:32
+32      {
+(gdb) l
+27      void output(int sum)
+28      {
+29          printf("The sum of the composite numbers entered is %d ",sum);
+30      }
+31      int main()
+32      {
+33          int n;
+34          n=input_array_size();
+35          int a[n];
+36          input_array(n,a);
+(gdb) s
+34          n=input_array_size();
+(gdb) s
+input_array_size () at problem04.c:6
+6           printf("Enter the size of the array \n");
+(gdb) s
+Enter the size of the array 
+7           scanf("%d",&n);
+(gdb) s
+s
+8           return n;
+(gdb) s
+9       }
+(gdb) s
+main () at problem04.c:35
+35          int a[n];
+(gdb) s
