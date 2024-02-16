@@ -7,4 +7,7 @@
     scanf("%d",&num);
     return num;
   }
-  
+  int find_gcd(int a,int b)
+  {
+    
+  }
