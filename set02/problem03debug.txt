@@ -1,23 +1,24 @@
 (gdb) b main
 Breakpoint 1 at 0x4014f3: file problem03.c, line 38.
-(gdb) r
-Starting program: C:\Users\vaagd\c_activity\set02/a.exe 
-[New Thread 12228.0x1514]
-[New Thread 12228.0x4a0]
-
-Breakpoint 1, main () at problem03.c:38
-38          int n=input_numbers();
 (gdb) l
+29          }
+30          else
+31          {
+32              printf("The entered number is not a composite number ");
 33
 34          }
 35      }
 36      int main()
 37      {
 38          int n=input_numbers();
-39          int result=is_composite(n);
-40          output(n,result);
-41          return 0;
-42      }(gdb) s
+(gdb) r
+Starting program: C:\Users\vaagd\c_activity\set02/a.exe 
+[New Thread 8740.0x2a7c]
+[New Thread 8740.0x2aa0]
+
+Breakpoint 1, main () at problem03.c:38
+38          int n=input_numbers();
+(gdb) s
 input_numbers () at problem03.c:6
 6           printf("Enter a number ");
 (gdb) s
@@ -46,11 +47,6 @@ main () at problem03.c:40
 output (n=6422476, result=1) at problem03.c:26
 26          if(result==1)
 (gdb) s
-28              printf("The entered number is not a composite number ");
+28              printf("The entered number is a composite number ");
 (gdb) s
-The entered number is not a composite number 35 }
-(gdb) s
-main () at problem03.c:41
-41          return 0; 
-(gdb) s
-42      }
+The entered number is a composite number 35     }
