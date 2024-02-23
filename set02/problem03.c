@@ -25,11 +25,11 @@ void output(int n,int result)
 {
     if(result==1)
     {
-        printf("The entered number is not a composite number ");
+        printf("The entered number is a composite number ");
     }
     else
     {
-        printf("The entered number is a composite number ");
+        printf("The entered number is not a composite number ");
 
     }
 }
