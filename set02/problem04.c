@@ -17,17 +17,19 @@ void input_array(int n,int a[n])
 }
 int is_composite(int n)
 {
-    for (int i=2;i <= n/2;i++)
+    for (int i=2;i < n;i++)
     {
-        if(n % i == 0)
+    if(n % a[i] == 0)
+    {
+    for (int i=2;i <= n/2;i++)
         {
             return 1;
         }
-        else
+    }}
+    else
         {
             return 2;
         }
-    }
 }
 int sum_composite_numbers(int n, int a[n],int result)
 {
