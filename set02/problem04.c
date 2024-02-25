@@ -25,17 +25,20 @@ int is_composite(int n)
         }
         else
         {
-            return 0;
+            return 2;
         }
     }
 }
-int sum_composite_numbers(int n, int a[n])
+int sum_composite_numbers(int n, int a[n],int result)
 {
     int sum=0;
+    if(result == 1)
+    {
     for(int i=0;i<n;i++)
     {
         sum=sum+a[i];
         return sum;
+    }
     }
 }
 void output(int sum)
@@ -44,11 +47,11 @@ void output(int sum)
 }
 int main()
 {
-    int n;
+    int n,result;
     n=input_array_size();
     int a[n];
     input_array(n,a);
-    int sum=sum_composite_numbers(n,a);
+    int sum=sum_composite_numbers(n,a,result);
     output(sum);
     return 0;
 }
