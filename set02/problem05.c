@@ -9,8 +9,4 @@
   }
   int find_gcd(int a,int b)
   {
-    for (int i=a;a<=1;i--)
-    {
-      
-    }
   }
